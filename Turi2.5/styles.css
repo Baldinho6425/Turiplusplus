@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    margin: 0;
+}
+
+.header input {
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 5px;
+    width: 200px;
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feed {
+    width: 500px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.post img {
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.post .caption {
+    padding: 10px;
+}
+
+.comments {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comments h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.comments form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.comments form input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.comments form button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comments form button:hover {
+    background-color: #287bb5;
+}
+
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #dbdbdb;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.icons button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icons button img {
+    width: 24px;
+    height: 24px;
+}
+
