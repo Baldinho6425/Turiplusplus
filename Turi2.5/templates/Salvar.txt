@@ -12,10 +12,10 @@
         <h1>TURI++</h1>
         <input type="text" placeholder="Pesquisar">
         <div class="icons">
-            <button onclick="location.href='#'"><i class="fas fa-home"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-envelope"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-bell"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-user"></i></button>
+            <button onclick="location.href='#'"><img src="../Icons/botao-de-inicio.png" alt="Home"></button>
+            <button onclick="location.href='#'"><img src="{{ url_for('static', filename='jun-20-24-STsC1-01HY.ACJtJMP73R-2K.png') }}" alt="Mensagens"></button>
+            <button onclick="location.href='#'"><img src="{{ url_for('static', filename='LOGO_Fisioterapia-257x300.jpg') }}" alt="Notificações"></button>
+            <button onclick="location.href='#'"><img src="https://image.flaticon.com/icons/png/512/3135/3135715.png" alt="Perfil"></button>
         </div>
     </div>
 
@@ -25,12 +25,7 @@
             <div class="post">
                 <img src="{{ post['path'] }}" alt="Post Image">
                 <div class="caption">
-                    <p><strong>USER</strong> {{ post['caption'] }}</p>
-                </div>
-                <div class="actions">
-                    <button class="like-button" data-post-path="{{ post['path'] }}">
-                        <i class="fas fa-heart"></i>
-                    </button>
+                    <p><strong>USER</strong> Nova postagem no TURI++.</p>
                 </div>
                 <div class="comments">
                     <h3>Comentários</h3>
@@ -49,10 +44,10 @@
     </div>
 
     <div class="footer">
-        <button onclick="location.href='#'"><i class="fas fa-home"></i></button>
-        <button onclick="location.href='#'"><i class="fas fa-search"></i></button>
-        <button onclick="document.getElementById('uploadModal').style.display='block'"><i class="fas fa-plus-circle"></i></button>
-        <button onclick="location.href='#'"><i class="fas fa-user"></i></button>
+        <button onclick="location.href='#'"><img src="{{ url_for('static', filename='botao-de-inicio.png') }}" alt="Home"></button>
+        <button onclick="location.href='#'"><img src="{{ url_for('static', filename='jun-20-24-STsC1-01HY.ACJtJMP73R-2K.png') }}" alt="Pesquisar"></button>
+        <button onclick="document.getElementById('uploadModal').style.display='block'"><img src="https://image.flaticon.com/icons/png/512/1828/1828961.png" alt="Publicar"></button>
+        <button onclick="location.href='#'"><img src="{{ url_for('static', filename='LOGO_Fisioterapia-257x300.jpg') }}" alt="Perfil"></button>
     </div>
 
     <div id="uploadModal" class="modal">
@@ -60,31 +55,9 @@
             <span class="close" onclick="document.getElementById('uploadModal').style.display='none'">&times;</span>
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <input type="file" name="file" required>
-                <textarea name="caption" placeholder="Escreva uma legenda" rows="3"></textarea>
                 <input type="submit" value="Publicar">
             </form>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.like-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const postPath = this.dataset.postPath;
-                fetch('/like', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ post_path: postPath }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        this.classList.toggle('liked');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
