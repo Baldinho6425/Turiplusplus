@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TURI++</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-a7bft6TlyFVFOWvO8fRQkPzU5ibmx+nJf6xNUthL+fIK5pyudLK+lQszPfY1vOjWgIV7fuTzUeZfrC4KThz8ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="header">
         <h1>TURI++</h1>
         <input type="text" placeholder="Pesquisar">
         <div class="icons">
-            <button onclick="location.href='#'"><i class="fas fa-home"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-envelope"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-bell"></i></button>
-            <button onclick="location.href='#'"><i class="fas fa-user"></i></button>
+            <button onclick="location.href='#'">Home</button>
+            <button onclick="location.href='#'">Mensagens</button>
+            <button onclick="location.href='#'">Notificações</button>
+            <button onclick="location.href='#'">Perfil</button>
         </div>
     </div>
 
@@ -29,7 +28,7 @@
                 </div>
                 <div class="actions">
                     <button class="like-button" data-post-path="{{ post['path'] }}">
-                        <i class="fas fa-heart"></i>
+                        Curtir
                     </button>
                 </div>
                 <div class="comments">
@@ -49,10 +48,10 @@
     </div>
 
     <div class="footer">
-        <button onclick="location.href='#'"><i class="fas fa-home"></i></button>
-        <button onclick="location.href='#'"><i class="fas fa-search"></i></button>
-        <button onclick="document.getElementById('uploadModal').style.display='block'"><i class="fas fa-plus-circle"></i></button>
-        <button onclick="location.href='#'"><i class="fas fa-user"></i></button>
+        <button onclick="location.href='#'">Home</button>
+        <button onclick="location.href='#'">Pesquisar</button>
+        <button onclick="document.getElementById('uploadModal').style.display='block'">Publicar</button>
+        <button onclick="location.href='#'">Perfil</button>
     </div>
 
     <div id="uploadModal" class="modal">
